@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c7c76b6-b9c7-4a2a-9097-36160d8b2262" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/blog/adminforms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/typeidea/custom_site.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/comment/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/comment/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +23,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1TYl3TewyJXu5HeLHOqNEX8PONS" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -78,7 +83,12 @@
       <workItem from="1573868238051" duration="177000" />
       <workItem from="1574168204739" duration="3920000" />
       <workItem from="1574253751878" duration="1413000" />
-      <workItem from="1574256062145" duration="877000" />
+      <workItem from="1574256062145" duration="1051000" />
+      <workItem from="1574342938047" duration="3694000" />
+      <workItem from="1574414488064" duration="1851000" />
+      <workItem from="1574517380399" duration="2227000" />
+      <workItem from="1574776954423" duration="2670000" />
+      <workItem from="1574864141387" duration="2535000" />
     </task>
     <servers />
   </component>
