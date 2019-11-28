@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c7c76b6-b9c7-4a2a-9097-36160d8b2262" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blog/adminforms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typeidea/custom_site.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/typeidea/base_admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/comment/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/custom_site.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/custom_site.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +86,8 @@
       <workItem from="1574414488064" duration="1851000" />
       <workItem from="1574517380399" duration="2227000" />
       <workItem from="1574776954423" duration="2670000" />
-      <workItem from="1574864141387" duration="2535000" />
+      <workItem from="1574864141387" duration="2685000" />
+      <workItem from="1574944785167" duration="3900000" />
     </task>
     <servers />
   </component>

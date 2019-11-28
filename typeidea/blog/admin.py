@@ -5,45 +5,31 @@ from django.utils.html import format_html
 from .models import Category,Tag,Post
 from .adminforms import PostAdminForm
 from typeidea.custom_site import custom_site
+from typeidea.base_admin import BaseOwnerAdmin
 # Register your models here.
 
 #设置在分类页面添加文章编辑
 class PostInline(admin.TabularInline):
-    fields = ('title','desc','owner')
+    fields = ('title','desc')
     extra = 1
     model = Post
 
 @admin.register(Category,site = custom_site)
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(BaseOwnerAdmin):
     inlines = (PostInline,)
     list_display = ('name','status','is_nav','owner','created_time','post_count')
-    fields = ('name','status','is_nav')
+    fields = ('name','status','is_nav','owner')
 
     def post_count(self,obj):
         return obj.post_set.count()
     post_count.short_description = '文章数量'
 
-    def save_model(self,request,obj,form,change):
-        obj.owner =  request.user
-        return super().save_model(request,obj,form,change)
-
-    def get_queryset(self,request):
-        qs = super().get_queryset(request)
-        return qs.filter(owner =  request.user)
-
 
 @admin.register(Tag,site = custom_site)
-class TagAdmin(admin.ModelAdmin):
+class TagAdmin(BaseOwnerAdmin):
     list_display = ('name','status','owner','created_time')
     fields = ['name','status']
 
-    def save_model(self,request,obj,form,change):
-        obj.owner = request.user
-        return super().save_model(request,obj,form,change)
-
-    def get_queryset(self,request):
-        qs =  super().get_queryset(request)
-        return qs.filter(owner = request.user)
 
 #自定义过滤器
 class CategoryOwnerFilter(admin.SimpleListFilter):
@@ -61,7 +47,7 @@ class CategoryOwnerFilter(admin.SimpleListFilter):
 
 
 @admin.register(Post,site = custom_site)
-class PostAdmin(admin.ModelAdmin):
+class PostAdmin(BaseOwnerAdmin):
     form = PostAdminForm
     list_display = ('title','status','category','owner','created_time','operator') #operator是自定义字段，需要下面的方法才行，不然会报错
     # list_display = ('title','desc','content','status','category','owner','created_time')
@@ -111,10 +97,3 @@ class PostAdmin(admin.ModelAdmin):
                          reverse('cus_admin:blog_post_change',args=(obj.id,)))
     operator.short_description = '操作'                 #指定表头
 
-    def save_model(self,request,obj,form,change):
-        obj.owner = request.user
-        return super().save_model(request,obj,form,change)
-
-    def get_queryset(self,request):
-        qs = super().get_queryset(request)
-        return qs.filter(owner = request.user)
